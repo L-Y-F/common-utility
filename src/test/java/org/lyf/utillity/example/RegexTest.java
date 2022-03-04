@@ -10,6 +10,7 @@ public class RegexTest {
 
     public static void main(String[] args) {
         String text = "afnjdka@163.com";
+//        String
         String text1 = "afnjdka@163";
         // 测试文本是否符合邮件规则
         System.out.println(RegexUtil.isMatching(text, RegexUtil.EMAIL_REGEX));
