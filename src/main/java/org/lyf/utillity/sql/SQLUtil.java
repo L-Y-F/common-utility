@@ -1,6 +1,5 @@
 package org.lyf.utillity.sql;
 
-import org.apache.commons.lang3.StringUtils;
 import org.lyf.utillity.basic.StrUtil;
 
 import java.util.Date;
@@ -29,7 +28,7 @@ public class SQLUtil {
      * @return
      */
     public static String singleQuotesFilter(String value) {
-        if (StringUtils.isNotBlank(value)) {
+        if (StrUtil.isNotBlank(value)) {
             value = value.replaceAll("'", "\\\\'");
         }
         return value;
@@ -54,7 +53,7 @@ public class SQLUtil {
      * @return
      */
     public static String sqlInjectionFilter(String sqlParam) {
-        if (StringUtils.isBlank(sqlParam)) {
+        if (StrUtil.isBlank(sqlParam)) {
             return sqlParam;
         }
         // (?i)不区分大小写替换

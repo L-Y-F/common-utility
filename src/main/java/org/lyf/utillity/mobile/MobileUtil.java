@@ -1,6 +1,7 @@
 package org.lyf.utillity.mobile;
 
-import org.apache.commons.lang3.StringUtils;
+
+import org.lyf.utillity.basic.StrUtil;
 
 import java.util.regex.Pattern;
 
@@ -39,7 +40,7 @@ public class MobileUtil {
 	 * @return
 	 */
 	public static boolean checkPhone(String phone) {
-		if (StringUtils.isNotBlank(phone)) {
+		if (StrUtil.isNotBlank(phone)) {
 			if (checkChinaMobile(phone) || checkChinaUnicom(phone) || checkChinaTelecom(phone)) {
 				return true;
 			}
@@ -54,7 +55,7 @@ public class MobileUtil {
 	 * @return
 	 */
 	public static boolean checkChinaMobile(String phone) {
-		if (StringUtils.isNotBlank(phone)) {
+		if (StrUtil.isNotBlank(phone)) {
 			Pattern regexp = Pattern.compile(CHINA_MOBILE_PATTERN);
 			if (regexp.matcher(phone).matches()) {
 				return true;
@@ -70,7 +71,7 @@ public class MobileUtil {
 	 * @return
 	 */
 	public static boolean checkChinaUnicom(String phone) {
-		if (StringUtils.isNotBlank(phone)) {
+		if (StrUtil.isNotBlank(phone)) {
 			Pattern regexp = Pattern.compile(CHINA_UNICOM_PATTERN);
 			if (regexp.matcher(phone).matches()) {
 				return true;
@@ -86,7 +87,7 @@ public class MobileUtil {
 	 * @return
 	 */
 	public static boolean checkChinaTelecom(String phone) {
-		if (StringUtils.isNotBlank(phone)) {
+		if (StrUtil.isNotBlank(phone)) {
 			Pattern regexp = Pattern.compile(CHINA_TELECOM_PATTERN);
 			if (regexp.matcher(phone).matches()) {
 				return true;
@@ -102,7 +103,7 @@ public class MobileUtil {
 	 * @return java.lang.String
 	 */
 	public static String hideFourMiddleNumber(String phone) {
-		if (StringUtils.isBlank(phone)) {
+		if (StrUtil.isBlank(phone)) {
 			return phone;
 		}
 		return phone.replaceAll("(\\d{3})\\d{4}(\\d{4})","$1****$2");

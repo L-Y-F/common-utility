@@ -1,6 +1,6 @@
 package org.lyf.utillity.idcard;
 
-import org.apache.commons.lang3.StringUtils;
+import org.lyf.utillity.basic.StrUtil;
 
 import java.util.regex.Pattern;
 
@@ -23,7 +23,7 @@ public class IdCardUtil {
     private static final String reg15Bitb = "\\d{6}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}";
 
     public static boolean check18(String idCard) {
-        if (StringUtils.isBlank(idCard) || idCard.length() != 18) {
+        if (StrUtil.isBlank(idCard) || idCard.length() != 18) {
             return false;
         }
         Pattern regexp = Pattern.compile(reg18Bitb);
@@ -35,7 +35,7 @@ public class IdCardUtil {
     }
 
     public static boolean check15(String idCard) {
-        if (StringUtils.isBlank(idCard) || idCard.length() != 15) {
+        if (StrUtil.isBlank(idCard) || idCard.length() != 15) {
             return false;
         }
         Pattern regexp = Pattern.compile(reg15Bitb);
@@ -47,7 +47,7 @@ public class IdCardUtil {
     }
 
     public static boolean checkIdCard(String idCard) {
-        if (StringUtils.isNotBlank(idCard)) {
+        if (StrUtil.isNotBlank(idCard)) {
             if (check18(idCard) || check15(idCard)) {
                 return true;
             }
