@@ -1,6 +1,6 @@
-package org.lyf.utillity.example;
+package org.sljl.utillity.example;
 
-import org.lyf.utillity.basic.MapHelper;
+import org.sljl.utillity.basic.MapHelper;
 
 import java.util.Map;
 

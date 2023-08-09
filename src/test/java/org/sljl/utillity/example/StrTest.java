@@ -1,6 +1,6 @@
-package org.lyf.utillity.example;
+package org.sljl.utillity.example;
 
-import org.lyf.utillity.basic.StrUtil;
+import org.sljl.utillity.basic.StrUtil;
 
 /**
  * @author L.Y.F

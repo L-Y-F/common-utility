@@ -1,4 +1,4 @@
-package org.lyf.utillity.basic;
+package org.sljl.utillity.basic;
 
 /**
  * 数字处理工具

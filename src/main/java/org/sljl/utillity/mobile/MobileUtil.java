@@ -1,7 +1,7 @@
-package org.lyf.utillity.mobile;
+package org.sljl.utillity.mobile;
 
 
-import org.lyf.utillity.basic.StrUtil;
+import org.sljl.utillity.basic.StrUtil;
 
 import java.util.regex.Pattern;
 

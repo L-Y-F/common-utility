@@ -1,6 +1,6 @@
-package org.lyf.utillity.sql;
+package org.sljl.utillity.sql;
 
-import org.lyf.utillity.basic.StrUtil;
+import org.sljl.utillity.basic.StrUtil;
 
 import java.util.Date;
 

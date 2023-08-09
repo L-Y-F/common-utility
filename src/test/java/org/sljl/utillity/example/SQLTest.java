@@ -1,6 +1,6 @@
-package org.lyf.utillity.example;
+package org.sljl.utillity.example;
 
-import org.lyf.utillity.sql.SQLUtil;
+import org.sljl.utillity.sql.SQLUtil;
 
 /**
  * @author L.Y.F

@@ -1,6 +1,6 @@
-package org.lyf.utillity.idcard;
+package org.sljl.utillity.idcard;
 
-import org.lyf.utillity.basic.StrUtil;
+import org.sljl.utillity.basic.StrUtil;
 
 import java.util.regex.Pattern;
 

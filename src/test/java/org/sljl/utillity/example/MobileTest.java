@@ -1,6 +1,6 @@
-package org.lyf.utillity.example;
+package org.sljl.utillity.example;
 
-import org.lyf.utillity.mobile.MobileUtil;
+import org.sljl.utillity.mobile.MobileUtil;
 
 /**
  * @author L.Y.F

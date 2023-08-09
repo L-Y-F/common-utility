@@ -1,4 +1,4 @@
-package org.lyf.utillity.random;
+package org.sljl.utillity.random;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.RandomUtils;

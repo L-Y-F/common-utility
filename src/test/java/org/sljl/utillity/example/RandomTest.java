@@ -1,7 +1,7 @@
-package org.lyf.utillity.example;
+package org.sljl.utillity.example;
 
 import com.google.common.collect.Lists;
-import org.lyf.utillity.random.RandomUtil;
+import org.sljl.utillity.random.RandomUtil;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package org.lyf.utillity.example;
+package org.sljl.utillity.example;
 
-import org.lyf.utillity.idcard.IdCardUtil;
+import org.sljl.utillity.idcard.IdCardUtil;
 
 /**
  * @author L.Y.F
