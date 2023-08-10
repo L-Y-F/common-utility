@@ -1,8 +1,8 @@
-package org.sljl.utillity.sql;
+package org.sljl.utillity.utils.sql;
 
 import org.apache.commons.lang3.StringUtils;
-import org.sljl.utillity.basic.StrUtil;
-import org.sljl.utillity.random.RandomUtil;
+import org.sljl.utillity.utils.basic.StrUtil;
+import org.sljl.utillity.utils.random.RandomUtil;
 
 import java.util.Date;
 
@@ -21,7 +21,7 @@ public class SQLUtil {
      * @return
      */
     public static String generatePrimaryKey() {
-        return StrUtil.generateSimpleUUID();
+        return StrUtil.generateSimpleLowerCaseUUID();
     }
 
     /**
