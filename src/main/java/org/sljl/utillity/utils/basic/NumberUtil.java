@@ -1,4 +1,4 @@
-package org.sljl.utillity.basic;
+package org.sljl.utillity.utils.basic;
 
 /**
  * 数字处理工具
