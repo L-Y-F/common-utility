@@ -1,7 +1,6 @@
-package org.sljl.utillity.random;
+package org.sljl.utillity.utils.random;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.RandomUtils;
 
 import java.util.List;
 import java.util.Random;
@@ -25,18 +24,6 @@ public class RandomUtil {
         Random random = new Random();
         int s = random.nextInt(endNum) % (endNum - beginNum + 1) + beginNum;
         return s;
-    }
-
-    /**
-     * 获取两个区域内的随机数
-     *
-     * @param beginNum
-     * @param endNum
-     *
-     * @return
-     */
-    public static long getRandRange(long beginNum, long endNum) {
-        return RandomUtils.nextLong(beginNum, endNum);
     }
 
     /**
