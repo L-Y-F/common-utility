@@ -1,7 +1,7 @@
 /**
  *
  */
-package org.sljl.utillity.regex;
+package org.sljl.utillity.utils.regex;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
