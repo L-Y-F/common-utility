@@ -1,4 +1,4 @@
-package org.sljl.utillity.basic;
+package org.sljl.utillity.utils.basic;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
@@ -36,8 +36,17 @@ public class StrUtil {
      *
      * @return 随机UUID
      */
-    public static String generateSimpleUUID() {
+    public static String generateSimpleLowerCaseUUID() {
         return generateUUID().replaceAll("-", "").toLowerCase();
+    }
+
+    /**
+     * 生成简单的UUID（去掉横岗并且转大写）
+     *
+     * @return 随机UUID
+     */
+    public static String generateSimpleUpperCaseUUID() {
+        return generateUUID().replaceAll("-", "").toUpperCase();
     }
 
     /**
