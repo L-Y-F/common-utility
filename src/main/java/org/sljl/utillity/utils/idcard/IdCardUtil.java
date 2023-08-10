@@ -1,6 +1,6 @@
-package org.sljl.utillity.idcard;
+package org.sljl.utillity.utils.idcard;
 
-import org.sljl.utillity.basic.StrUtil;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Pattern;
 
@@ -23,31 +23,27 @@ public class IdCardUtil {
     private static final String reg15Bitb = "\\d{6}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}";
 
     public static boolean check18(String idCard) {
-        if (StrUtil.isBlank(idCard) || idCard.length() != 18) {
-            return false;
+        if (StringUtils.isNotBlank(idCard)) {
+            Pattern regexp = Pattern.compile(reg18Bitb);
+            if (regexp.matcher(idCard).matches()) {
+                return validate18Idcard(idCard);
+            }
         }
-        Pattern regexp = Pattern.compile(reg18Bitb);
-        if (regexp.matcher(idCard).matches()) {
-            return validate18Idcard(idCard);
-        } else {
-            return false;
-        }
+        return false;
     }
 
     public static boolean check15(String idCard) {
-        if (StrUtil.isBlank(idCard) || idCard.length() != 15) {
-            return false;
+        if (StringUtils.isNotBlank(idCard)) {
+            Pattern regexp = Pattern.compile(reg15Bitb);
+            if (regexp.matcher(idCard).matches()) {
+                return true;
+            }
         }
-        Pattern regexp = Pattern.compile(reg15Bitb);
-        if (regexp.matcher(idCard).matches()) {
-            return true;
-        } else {
-            return false;
-        }
+        return false;
     }
 
     public static boolean checkIdCard(String idCard) {
-        if (StrUtil.isNotBlank(idCard)) {
+        if (StringUtils.isNotBlank(idCard)) {
             if (check18(idCard) || check15(idCard)) {
                 return true;
             }
@@ -119,6 +115,21 @@ public class IdCardUtil {
                 break;
         }
         return num;
+    }
+
+    public static void main(String[] args) {
+        String idcard17 = "372522197308072610";
+        System.err.println(IdCardUtil.checkIdCard(idcard17));
+
+        //        int[] IDnums = new int[17];
+        //        for (int i = 0; i < idcard17.length(); i++) {
+        //            IDnums[i] = idcard17.charAt(i) - '0';
+        //        }
+        //        int sum = getSum(IDnums, power);
+        //        int last = getLastNum(sum);
+        //        String idCard = idcard17+last;
+        //        System.out.println(idcard17+last);
+        //        System.out.println(IdCardUtil.checkIdCard(idCard));
     }
 
 }
