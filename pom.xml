@@ -10,7 +10,7 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <groupId>org.lyf</groupId>
+    <groupId>org.sljl</groupId>
     <artifactId>common-utillity</artifactId>
     <version>1.0.1.001</version>
     <packaging>jar</packaging>
