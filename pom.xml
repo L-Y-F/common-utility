@@ -12,7 +12,7 @@
 
     <groupId>org.lyf</groupId>
     <artifactId>common-utillity</artifactId>
-    <version>1.0.0.01</version>
+    <version>1.0.1.001</version>
     <packaging>jar</packaging>
     <name>common-utillity</name>
     <description>common-utillity</description>
