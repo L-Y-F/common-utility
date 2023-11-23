@@ -29,6 +29,16 @@ public class RegexUtil {
     public static final String EMOJI_REGEX = "[\ud83c\udc00-\ud83c\udfff|\ud83d\udc00-\ud83d\udfff|\u2600-\u27ff]";
     /** 正整数正则（不包含0） */
     public static final String NUMERIC_POSITIVE_REGEX = "^[1-9]\\d*$";
+    /** 匹配八位生日区间范围1900 ~ 2099年之间 */
+    public static final String BIRTHDAY8_REGEX = "(19|20)\\d{2}(0\\d|1[12])([012]\\d|3[01])";
+    /** 匹配六位生日 */
+    public static final String BIRTHDAY6_REGEX = "\\d{2}(0\\d|1[12])([012]\\d|3[01])";
+    /** 匹配4位及以上的豹子号 */
+    public static final String LEOPARD_NUMBER_REGEX = "(\\d)\\1{3,}";
+    /** 匹配6位顺子,包括递增顺子和递减顺子 */
+    public static final String STRAIGHT_NUMBER_REGEX = "(0(?=1)|1(?=2)|2(?=3)|3(?=4)|4(?=5)|5(?=6)|6(?=7)|7(?=8)|8(?=9)){5}|(9(?=8)|8(?=7)|7(?=6)|6(?=5)|5(?=4)|4(?=3)|3(?=2)|2(?=1)|1(?=0)){5}";
+    /** 匹配中文、英文、数字、常规特殊字符的正则表达式 */
+    private static final String ANY_ROUTINE_REGEX = "^[\\u4e00-\\u9fa5a-zA-Z0-9!@#$%^&*()；“”'，。？《》｛｝【】`·！￥%……&*（）——=、|_+{}\\[\\]:;<>,.?~\\\\/-]+$";
 
     /**
      * 将source字符串中符合pattern正则规则的字符串全部替换成replace
