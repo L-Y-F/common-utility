@@ -1,8 +1,6 @@
 package org.sljl.utillity.utils.sql;
 
-import org.apache.commons.lang3.StringUtils;
 import org.sljl.utillity.utils.basic.StrUtil;
-import org.sljl.utillity.utils.random.RandomUtil;
 
 import java.util.Date;
 
@@ -21,16 +19,7 @@ public class SQLUtil {
      * @return
      */
     public static String generatePrimaryKey() {
-        return StrUtil.generateSimpleLowerCaseUUID();
-    }
-
-    /**
-     * 生成16位有序ID值（时间戳+随机值）
-     * @return
-     */
-    public static String createOrderId() {
-        //13位时间戳 + 3位数随机值
-        return System.currentTimeMillis()+""+ RandomUtil.getRandRange(100, 999);
+        return StrUtil.generateSimpleUUID();
     }
 
     /**
@@ -39,7 +28,7 @@ public class SQLUtil {
      * @return
      */
     public static String singleQuotesFilter(String value) {
-        if (StringUtils.isNotBlank(value)) {
+        if (StrUtil.isNotBlank(value)) {
             value = value.replaceAll("'", "\\\\'");
         }
         return value;
@@ -64,7 +53,7 @@ public class SQLUtil {
      * @return
      */
     public static String sqlInjectionFilter(String sqlParam) {
-        if (StringUtils.isBlank(sqlParam)) {
+        if (StrUtil.isBlank(sqlParam)) {
             return sqlParam;
         }
         // (?i)不区分大小写替换
